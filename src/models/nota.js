@@ -15,25 +15,20 @@ class Nota {
     }
 
     mediaCA() {
-        var m = Math.max(
-            0.4 * this.a1 + 0.6 * this.a2,
-            0.4 * this.a1 + 0.6 * this.a3,
-            0.4 * this.a3 + 0.6 * this.a2
-        );
-        if (m <= 10) {
-            if (m >= 9) {
-                return "SS";
-            } else if (m >= 7 && m < 9) {
-                return "MS";
-            } else if (m >= 5 && m < 7) {
-                return "MM";
-            } else {
-                if (m >= 3) { return "MI"; }
-                else if (m >= 0.1 && m < 3){return "II";}
-                return "SR";
-            }
+        const media = this.mediaFinal();
+
+        if (media >= 0 && media < 2.5) {
+            return "II";
+        } else if (media >= 2.5 && media < 5) {
+            return "MI";
+        } else if (media >= 5 && media < 7.5) {
+            return "MM";
+        } else if (media >= 7.5 && media < 9) {
+            return "MS";
+        } else if (media >= 9 && media <= 10) {
+            return "SS";
         } else {
-            return "erro na matrix de notas"
+            throw new Error("Nota inválida.");
         }
     }
 }
