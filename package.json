@@ -1,0 +1,18 @@
+{
+  "name": "aluno-online",
+  "version": "1.0.0",
+  "description": "Projeto criado para realização de atividades práticas.",
+  "main": "index.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "tests": "cypress open"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "cypress": "^12.14.0"
+  }
+}
