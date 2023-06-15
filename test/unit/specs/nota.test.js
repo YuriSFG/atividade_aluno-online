@@ -2,12 +2,12 @@ const Nota = require('../src/models/nota');
 
 describe('Cálculo da média final e retorno do conceito', () => {
     test('retorna o conceito SS - Superior para média >= 9,0', () => {
-        let nota = new Nota(null, 10, 10, 10);
+        let nota = new Nota(null, 9, 9.5, 10);
         expect(nota.MediaFinal()).toEqual('SS - Superior');
     });
 
     test('retorna o conceito MS - Médio Superior para média entre 7,0 e 8,9', () => {
-        let nota = new Nota(null, 7.5, 8, 6.5);
+        let nota = new Nota(null, 7.5, 8, 8.9);
         expect(nota.MediaFinal()).toEqual('MS - Médio Superior');
     });
 
