@@ -14,7 +14,7 @@ describe('Login', () => {
   
       
       cy.url().should('eq', 'http://localhost:3000/');
-      cy.contains('Bem-vindo, Edgar Amaya!').should('be.visible');
+      cy.contains('Olá, Edgar Amaya!').should('be.visible');
     });
   
     it('Senha inválida!', () => {
